@@ -11,10 +11,11 @@ import { AVAILABLE_ICON_THEMES } from '@/domain/icon/IconTheme';
 import { AVAILABLE_LANGUAGES } from '@/domain/localization/AppLanguage';
 import { AVAILABLE_WEEK_START_DAYS, WeekStartDay } from '@/domain/localization/WeekStartDay';
 import {
-  useMockDataMode,
+  // MVP PLAYSTORE: useMockDataMode e useToggleMockDataMode comentados (dados de teste)
+  // useMockDataMode,
   useSaveProfile,
   useSaveSettings,
-  useToggleMockDataMode,
+  // useToggleMockDataMode,
   useUserProfile,
 } from '@/features/settings/hooks';
 import { iconThemeTranslationKey, languageTranslationKey } from '@/presentation/i18n/translations';
@@ -33,10 +34,11 @@ export const SettingsScreen = () => {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const profileQuery = useUserProfile();
-  const mockDataModeQuery = useMockDataMode();
+  // MVP PLAYSTORE: hooks de dados de teste comentados
+  // const mockDataModeQuery = useMockDataMode();
   const saveProfileMutation = useSaveProfile();
   const saveSettingsMutation = useSaveSettings();
-  const toggleMockDataMutation = useToggleMockDataMode();
+  // const toggleMockDataMutation = useToggleMockDataMode();
 
   const [name, setName] = useState('');
   const [showNameEditor, setShowNameEditor] = useState(false);
@@ -130,13 +132,14 @@ export const SettingsScreen = () => {
     }
   };
 
-  const toggleMockData = async (value: boolean) => {
-    try {
-      await toggleMockDataMutation.mutateAsync(value);
-    } catch {
-      Alert.alert(t('common.error'), t('settings.mockData.error'));
-    }
-  };
+  // MVP PLAYSTORE: função de mock data comentada
+  // const toggleMockData = async (value: boolean) => {
+  //   try {
+  //     await toggleMockDataMutation.mutateAsync(value);
+  //   } catch {
+  //     Alert.alert(t('common.error'), t('settings.mockData.error'));
+  //   }
+  // };
 
   const photoUri = profileQuery.data?.photoUri;
   const hasPhoto = !!photoUri && photoUri.length > 0;
@@ -226,6 +229,7 @@ export const SettingsScreen = () => {
         subtitle={t('settings.academic.coursesSubtitle')}
         onPress={() => navigation.navigate('CourseSettings')}
       />
+      {/* MVP PLAYSTORE: seções de teste comentadas para publicação
       <SettingRow
         styles={styles}
         colors={colors}
@@ -243,6 +247,7 @@ export const SettingsScreen = () => {
         }}
         disabled={toggleMockDataMutation.isPending}
       />
+      */}
 
       {/* ─── Notificações ──────────────────────────────────────────────────── */}
       <Text style={styles.sectionLabel}>{t('settings.section.notifications')}</Text>
