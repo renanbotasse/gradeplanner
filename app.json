@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "GradePlanner",
+    "slug": "gradeplanner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F4F7F2"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F4F7F2"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O GradePlanner usa a galeria para foto de perfil e anexos locais."
+        }
+      ],
+      "expo-document-picker",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#6B4EFF",
+          "sounds": []
+        }
+      ],
+      "expo-localization"
+    ],
+    "extra": {
+      "useMockApi": true,
+      "apiBaseUrl": "http://localhost:3333"
+    }
+  }
+}

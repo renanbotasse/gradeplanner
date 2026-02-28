@@ -1,0 +1,30 @@
+appId: com.gradeplanner
+---
+- launchApp:
+    clearState: true
+- assertVisible: /Comecar|Começar|Start/
+- tapOn: /Comecar|Começar|Start/
+
+# Onboarding profile
+- tapOn: /O teu nome|Seu nome|Your name/
+- inputText: Renan
+- tapOn: /Proximo|Próximo|Next/
+
+# Onboarding course
+- tapOn: /Ex: Engenharia Informatica|Ex: Engenharia Informática|Engineering/
+- inputText: LEI UAb
+- tapOn: /Proximo|Próximo|Next/
+
+# Onboarding semester
+- tapOn: /Proximo|Próximo|Next/
+
+# Onboarding UCs
+- tapOn: /Nome da UC|Subject name|Nome da UC \*/
+- inputText: Bases de Dados
+- tapOn: /Proximo|Próximo|Next/
+
+# Onboarding assessments
+- tapOn: /Concluir|Finish/
+
+# Main app
+- assertVisible: /Home/

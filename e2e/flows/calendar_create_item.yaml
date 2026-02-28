@@ -1,0 +1,15 @@
+appId: com.gradeplanner
+---
+- launchApp:
+    clearState: false
+
+- tapOn: /Calendario|Calendário|Calendar/
+- assertVisible: /Novo Compromisso|New/
+- tapOn: /Novo Compromisso|New/
+
+- assertVisible: /Novo Evento|New Event/
+- tapOn: /Ex: Entrega do projeto|project/
+- inputText: Teste E2E Compromisso
+
+- tapOn: /Salvar|Save/
+- assertVisible: Teste E2E Compromisso
