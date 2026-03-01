@@ -17,13 +17,16 @@
     "ios": {
       "supportsTablet": true
     },
-    "android": { 
+    "android": {
       "package": "com.blazeraven.gradeplanner",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#F4F7F2"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -44,11 +47,15 @@
           "sounds": []
         }
       ],
-      "expo-localization"
+      "expo-localization",
+      "expo-sqlite"
     ],
     "extra": {
       "useMockApi": true,
-      "apiBaseUrl": "http://localhost:3333"
+      "apiBaseUrl": "http://localhost:3333",
+      "eas": {
+        "projectId": "1d1d2db7-6913-413a-bdb8-bf1add721279"
+      }
     }
   }
 }
