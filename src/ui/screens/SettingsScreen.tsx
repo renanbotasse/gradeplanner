@@ -340,7 +340,7 @@ export const SettingsScreen = () => {
         icon="privacy-tip"
         title={t('settings.about.privacyPolicy')}
         subtitle={t('settings.about.privacyPolicySubtitle')}
-        onPress={() => openExternalLink('https://blazeraven.github.io/gradeplanner-privacy/')}
+        onPress={() => openExternalLink('https://theblazeraven.github.io/gradeplanner-privacy/')}
       />
 
       <Text style={styles.versionText}>GradePlanner v0.6</Text>

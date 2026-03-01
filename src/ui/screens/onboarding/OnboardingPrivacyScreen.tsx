@@ -12,7 +12,7 @@ import { useAthenaTheme, type AthenaColors } from '@/ui/theme/tokens';
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, 'OnboardingPrivacy'>;
 
-const PRIVACY_POLICY_URL = 'https://blazeraven.github.io/gradeplanner-privacy/';
+const PRIVACY_POLICY_URL = 'https://theblazeraven.github.io/gradeplanner-privacy/';
 
 const BULLETS: Array<{ icon: keyof typeof MaterialIcons.glyphMap; key: keyof ReturnType<typeof useAppPreferences>['t'] extends never ? string : string }> = [
   { icon: 'smartphone', key: 'onboarding.privacy.bullet.local' },
